@@ -95,10 +95,10 @@ public class ActualizacionPingResource {
             try {
 
                 Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress("ovelhodacaixa@gmail.com"));
+                message.setFrom(new InternetAddress());
                 message.setRecipients(
                         Message.RecipientType.TO,
-                        InternetAddress.parse("af.varon@uniandes.edu.co,pipevaronmaya@gmail.com")
+                        InternetAddress.parse()
                 );
                 message.setSubject("Alerta Maleta!");
                 message.setText("Dear Mail Crawler,"
