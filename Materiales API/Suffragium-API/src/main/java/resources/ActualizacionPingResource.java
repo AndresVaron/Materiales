@@ -80,9 +80,6 @@ public class ActualizacionPingResource {
         double distance = distance(lat, lon, Double.parseDouble(detailDTO.getLatitud()), Double.parseDouble(detailDTO.getLongitud()));
         MaletaEntity maleta =maletaLogic.getMaleta(new Long(1));
         if (distance > 20&&!maleta.isEnviado()) {
-            final String username = "ovelhodacaixa@gmail.com";
-            final String password = "xcstehnfnczjraid";
-
             Properties prop = new Properties();
             prop.put("mail.smtp.host", "smtp.gmail.com");
             prop.put("mail.smtp.port", "587");
